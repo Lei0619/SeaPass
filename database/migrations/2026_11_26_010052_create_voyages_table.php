@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('voyages', function (Blueprint $table) {
             $table->id();
             $table->foreignId('boat_id')->nullable()->constrained()->cascadeOnDelete();
-            $table->string('voyage_id')->nulllable();
+            $table->string('voyage_id')->nullable();
             $table->dateTime('departure_at');
             $table->dateTime('arrival_at');
             $table->string('status');

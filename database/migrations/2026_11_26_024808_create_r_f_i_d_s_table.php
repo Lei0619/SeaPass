@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('r_f_i_d_s', function (Blueprint $table) {
             $table->id();
-            $table->foreign('passenger_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->foreignId('passenger_id')->nullable()->constrained('passengers')->cascadeOnDelete();
             $table->string('rfid_uid')->unique();
             $table->enum('status', ['active', 'inactive', 'lost'])->default('active');
             $table->timestamps();
