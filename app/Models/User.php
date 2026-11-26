@@ -49,12 +49,8 @@ class User extends Authenticatable implements MustVerifyEmail, PasskeyUser
         ];
     }
 
-    /**
-     * Get the admin associated with the user.
-     *
-     * @return HasOne
-     */
-    public function admin()
+    /** @return HasOne<Admin, $this> */
+    public function admin(): HasOne
     {
         return $this->hasOne(Admin::class, 'user_id');
     }

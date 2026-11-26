@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Voyages extends Model
 {
+    /** @use HasFactory<Factory<Voyages>> */
     use HasFactory;
 
     protected $fillable = [
@@ -25,14 +27,9 @@ class Voyages extends Model
         ];
     }
 
+    /** @return BelongsTo<Boats, $this> */
     public function boat(): BelongsTo
     {
         return $this->belongsTo(Boats::class, 'boat_id');
-    }
-
-    /** @return BelongsTo */
-    public function voyages()
-    {
-        return $this->belongsTo(Admin::class, 'admin_id');
     }
 }
