@@ -33,25 +33,25 @@ SeaPass consists of three primary components:
 
 ## Technology Stack
 
-| Component | Technology |
-|---|---|
-| Backend | Laravel 13 |
-| Frontend | React |
-| Server-side Integration | Inertia.js |
-| Programming Language | PHP, TypeScript |
-| Database | MySQL |
-| Styling | Tailwind CSS |
-| Development Environment | Docker / Laravel Sail |
-| Hardware Integration | RFID and camera-based components |
-| AI Integration | Facial verification |
+| Component               | Technology                       |
+| ----------------------- | -------------------------------- |
+| Backend                 | Laravel 13                       |
+| Frontend                | React                            |
+| Server-side Integration | Inertia.js                       |
+| Programming Language    | PHP, TypeScript                  |
+| Database                | MySQL                            |
+| Styling                 | Tailwind CSS                     |
+| Development Environment | Docker / Laravel Sail            |
+| Hardware Integration    | RFID and camera-based components |
+| AI Integration          | Facial verification              |
 
-*The specific AI model, processing environment, and hardware communication implementation may be updated as development progresses.*
+_The specific AI model, processing environment, and hardware communication implementation may be updated as development progresses._
 
 ## User Roles
 
-| Role | Responsibility |
-|---|---|
-| Super Administrator | Oversees the overall system and manages administrative access. |
+| Role                        | Responsibility                                                              |
+| --------------------------- | --------------------------------------------------------------------------- |
+| Super Administrator         | Oversees the overall system and manages administrative access.              |
 | Administrator / Boat Driver | Manages assigned boat operations and monitors passenger-related activities. |
 
 Each boat is assigned to one administrator under the project's current assignment model.
@@ -178,7 +178,7 @@ SeaPass is an academic group project. Its features, integrations, and implementa
 - Contributor 3 – To be added
 - Contributor 4 – To be added
 
-*Contributor names and responsibilities will be updated as the team information is finalized.*
+_Contributor names and responsibilities will be updated as the team information is finalized._
 
 ## License
 
