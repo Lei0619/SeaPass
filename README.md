@@ -85,3 +85,101 @@ Make sure the following tools are installed:
 ```bash
 git clone <repository-url>
 cd SeaPass
+```
+
+**2. Install PHP dependencies**
+
+```bash
+composer install
+```
+
+**3. Install JavaScript dependencies**
+
+```bash
+npm install
+```
+
+**4. Configure the environment**
+
+```bash
+cp .env.example .env
+```
+
+Configure the database and other required environment variables in `.env`.
+
+**5. Generate the application key**
+
+```bash
+php artisan key:generate
+```
+
+**6. Start the Docker environment**
+
+```bash
+docker compose up -d
+```
+
+**7. Run database migrations**
+
+```bash
+docker compose exec laravel.test php artisan migrate
+```
+
+**8. Start the frontend development server**
+
+```bash
+docker compose exec laravel.test npm run dev
+```
+
+Access the application through the local URL configured by the Docker environment.
+
+## Development Checks
+
+The project includes automated checks to help maintain code quality and consistency.
+
+Run the complete CI check:
+
+```bash
+docker compose exec laravel.test composer ci:check
+```
+
+Other available checks include:
+
+```bash
+docker compose exec laravel.test npm run check
+docker compose exec laravel.test npm run types:check
+docker compose exec laravel.test ./vendor/bin/pint --test
+```
+
+## Security and Privacy
+
+SeaPass is designed to handle passenger information and biometric-related data. Security and privacy considerations include:
+
+- Restricting access according to user roles.
+- Protecting passenger information and identification records.
+- Limiting access to facial verification data to authorized personnel.
+- Applying appropriate data retention and deletion policies.
+- Supporting manual review when automated verification is inconclusive.
+
+Biometric processing and passenger-data handling must follow applicable privacy requirements and institutional policies.
+
+## Project Status
+
+**Development in Progress**
+
+SeaPass is an academic group project. Its features, integrations, and implementation details may evolve throughout the development process.
+
+## Contributors
+
+**Development Team**
+
+- Contributor 1 – To be added
+- Contributor 2 – To be added
+- Contributor 3 – To be added
+- Contributor 4 – To be added
+
+*Contributor names and responsibilities will be updated as the team information is finalized.*
+
+## License
+
+This project is developed for academic purposes. Licensing and distribution terms are subject to the project team's and institution's requirements.
